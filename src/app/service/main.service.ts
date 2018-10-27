@@ -9,7 +9,7 @@ import { catchError, map } from 'rxjs/operators';
 export class MainService {
 
   public static readonly URL_ROOT = "https://canvas.ubc.ca/api/v1/";
-  public static readonly TOKEN = "11224~pIuXX8MsO8QLNmHvmr1lFOIgd3FqM6YGYMyf52qOQIj98veX39kbhcyho5d2JUmB";
+  // public static readonly TOKEN = "11224~pIuXX8MsO8QLNmHvmr1lFOIgd3FqM6YGYMyf52qOQIj98veX39kbhcyho5d2JUmB";
 
   
   constructor(
@@ -17,8 +17,8 @@ export class MainService {
   ) {
   }
 
-  public requestCourse() {
-    return this.http.get(MainService.URL_ROOT + "course/9381", new RequestOptions({search: MainService.TOKEN}))
+  public requestEvents() {
+    return this.http.get(MainService.URL_ROOT + "course/9381", new RequestOptions({search: {a: 1}}))
     .pipe(map(res => res.json), catchError(err => Observable.throw(err)));
   }
 
