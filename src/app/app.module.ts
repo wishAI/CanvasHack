@@ -9,6 +9,8 @@ import { HttpModule } from '@angular/http';
 import { CalendarComponent } from './component/calendar/calendar.component';
 import {MatCardModule} from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
+import {MatListModule} from '@angular/material/list';
+import {MatDividerModule} from '@angular/material/divider';
 
 
 @NgModule({
@@ -22,11 +24,15 @@ import {MatGridListModule} from '@angular/material/grid-list';
     AppRoutingModule,
     HttpModule,
     MatCardModule,
-    MatGridListModule
+    MatGridListModule,
+    MatListModule,
+    MatDividerModule
   ],
   exports: [
     MatCardModule,
-    MatGridListModule
+    MatGridListModule,
+    MatListModule,
+    MatDividerModule
   ],
   providers: [
     MainService
