@@ -8,6 +8,7 @@
     <mat-list>
       <mat-divider></mat-divider>
       <mat-list-item *ngFor="let event of calendar['events']">
+        <mat-icon mat-list-icon>event</mat-icon>
         {{event}}
       </mat-list-item>
       <mat-list-item *ngIf="calendar['events'].length == 0">

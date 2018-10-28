@@ -1,0 +1,14 @@
+<div class="wrapper-title">
+  <H1 class="title">Grades: </H1>
+</div>
+
+<mat-card class="wrapper-grade">
+  <mat-card-content [style.overflow]="'auto'" [style.height.px]="300">
+    <mat-list class="list" [style.overflow]="'auto'" [style.height.px]="250">
+        <mat-list-item *ngFor="let g of grades">
+          <mat-icon mat-list-icon>grade</mat-icon>
+          {{grade(g)}}
+        </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>

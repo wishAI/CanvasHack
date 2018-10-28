@@ -24,6 +24,13 @@ export class MainService {
       );
   }
 
+  public requestGrades() {
+    return this.http.get(MainService.URL_ROOT + 'courses/9381/students/submissions', {params: {a: 1}})
+      .pipe(
+        map(res => res.json())
+      );
+  }
+
   // private extractData(res: Response): Object {
   //   return res.json();
   // }

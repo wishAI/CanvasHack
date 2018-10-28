@@ -11,13 +11,16 @@ import {MatCardModule} from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatListModule} from '@angular/material/list';
 import {MatDividerModule} from '@angular/material/divider';
+import { GradeComponent } from './component/grade/grade.component';
+import {MatIconModule} from '@angular/material/icon';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     CalendarComponent,
-    CalendarCardComponent
+    CalendarCardComponent,
+    GradeComponent
   ],
   imports: [
     BrowserModule,
@@ -26,13 +29,15 @@ import {MatDividerModule} from '@angular/material/divider';
     MatCardModule,
     MatGridListModule,
     MatListModule,
-    MatDividerModule
+    MatDividerModule,
+    MatIconModule
   ],
   exports: [
     MatCardModule,
     MatGridListModule,
     MatListModule,
-    MatDividerModule
+    MatDividerModule,
+    MatIconModule
   ],
   providers: [
     MainService

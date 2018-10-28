@@ -13,8 +13,12 @@
   height: 100%;
 }
 
+.grade {
+  width: 90%;
+  height: 100%;
+}
+
 .wrapper-grade {
-  background-color: pink;
 }
 
 .wrapper-notificition {
