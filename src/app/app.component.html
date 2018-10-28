@@ -1,7 +1,11 @@
 <!--The content below is only a placeholder and can be replaced.-->
 
-<div class="wrapper">
-  <calendar-wrapper></calendar-wrapper>
-</div>
+<mat-grid-list cols="2" rows="2" rowHeight="50%" class="wrapper">
+  <mat-grid-tile class="wrapper-calendar" colspan="2">
+    <app-calendar-wrapper class="calendar"></app-calendar-wrapper>
+  </mat-grid-tile>
+  <mat-grid-tile class="wrapper-grade" colspan="1"></mat-grid-tile>
+  <mat-grid-tile class="wrapper-notificition" colspan="1"></mat-grid-tile>
+</mat-grid-list>
 
 <router-outlet></router-outlet>
