@@ -13,6 +13,7 @@ import {MatListModule} from '@angular/material/list';
 import {MatDividerModule} from '@angular/material/divider';
 import { GradeComponent } from './component/grade/grade.component';
 import {MatIconModule} from '@angular/material/icon';
+import { NotificationComponent } from './component/notification/notification.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import {MatIconModule} from '@angular/material/icon';
     AppComponent,
     CalendarComponent,
     CalendarCardComponent,
-    GradeComponent
+    GradeComponent,
+    NotificationComponent
   ],
   imports: [
     BrowserModule,

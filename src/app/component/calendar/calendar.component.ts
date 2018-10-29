@@ -25,7 +25,7 @@ export class CalendarComponent implements OnInit {
 
   loadModel(res: Object) {
     const events = <Object[]> res;
-    console.log(events[0]);
+    // console.log(events[0]);
     const date: Date = new Date();
     for (let i = 0; i < 5; i ++) {
       const calendar: Object = {};

@@ -1,0 +1,15 @@
+<div class="wrapper-title">
+  <H1 class="title">Notifications: </H1>
+</div>
+
+<mat-card class="wrapper-grade">
+  <mat-card-content [style.overflow]="'auto'" [style.height.px]="300">
+    <mat-list class="list" [style.overflow]="'auto'" [style.height.px]="250">
+        <mat-list-item *ngFor="let n of notifications">
+          <mat-icon mat-list-icon>notifications</mat-icon>
+          {{n['title']}}
+        </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>
+

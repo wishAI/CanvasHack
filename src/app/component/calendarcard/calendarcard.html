@@ -5,9 +5,9 @@
   </mat-card-header>
 
   <mat-card-content>
-    <mat-list>
-      <mat-divider></mat-divider>
-      <mat-list-item *ngFor="let event of calendar['events']">
+    <mat-list class="list" [style.overflow]="'auto'" [style.height.px]="230">
+      <mat-divider class="divider"></mat-divider>
+      <mat-list-item *ngFor="let event of calendar['events']" >
         <mat-icon mat-list-icon>event</mat-icon>
         {{event}}
       </mat-list-item>

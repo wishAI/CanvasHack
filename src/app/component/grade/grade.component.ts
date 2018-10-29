@@ -21,6 +21,7 @@ export class GradeComponent implements OnInit {
 
   ngOnInit(): void {
     this.mainService.requestGrades().subscribe(this.loadModel.bind(this));
+    // this.mainService.requestAssignments().subscribe(this.loadName.bind(this));
   }
 
   loadModel(res: Object) {
@@ -30,6 +31,29 @@ export class GradeComponent implements OnInit {
     }
 
     this.grades = this.grades.filter(grade => grade['grade'] !== '0' && grade['grade'] != null);
+
+    for (const grade of this.grades) {
+      this.mainService.requestAssignments(grade['assignment_id']).subscribe(this.loadName.bind(this));
+    }
+  }
+
+  loadName(res: Object) {
+    // console.log(res);
+    // console.log(this.grades);
+    // const asses: Object[] = <Object[]> res;
+    // for (const grade of this.grades) {
+    //   for (const ass of asses) {
+    //     // console.log(grade['assignment_id']);
+    //     if (ass['id'] === grade['assignment_id']) {
+    //       grade['name'] = ass['name'];
+    //     }
+    //   }
+    // }
+    for (const grade of this.grades) {
+      if (grade['assignment_id'] === res['id']) {
+        grade['name'] = res['name'];
+      }
+    }
   }
 
   handleError(err: Object) {
@@ -37,7 +61,7 @@ export class GradeComponent implements OnInit {
   }
 
   grade(grade: {}): string {
-    return grade['name'] + '    ' + grade['score'] + '/' + grade['grade'];
+    return grade['name'] + ' ----- ' + grade['score'] + '/' + grade['grade'];
   }
 
 }

@@ -18,9 +18,13 @@
   height: 100%;
 }
 
+.notification {
+  width: 90%;
+  height: 100%;
+}
+
 .wrapper-grade {
 }
 
 .wrapper-notificition {
-  background-color: hotpink;
 }

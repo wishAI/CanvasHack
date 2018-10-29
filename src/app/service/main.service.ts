@@ -31,6 +31,20 @@ export class MainService {
       );
   }
 
+  public requestNotifications() {
+    return this.http.get(MainService.URL_ROOT + 'users/activity_stream', {params: {a: 1}})
+      .pipe(
+        map(res => res.json())
+      );
+  }
+
+  public requestAssignments(id: number) {
+    return this.http.get(MainService.URL_ROOT + 'courses/9381/assignments/' + id, {params: {a: 1}})
+      .pipe(
+        map(res => res.json())
+      );
+  }
+
   // private extractData(res: Response): Object {
   //   return res.json();
   // }
